@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Francisco — Cybersecurity Student Portfolio</title>
+<meta name="description" content="Personal academic portfolio of Godwin Chukwunonso (Francisco), B.Sc. Cybersecurity student at Miva Open University.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER / NAVIGATION ============ -->
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="nav-brand" aria-label="Home">
+      <span class="prompt">~/francisco</span><span class="cursor" aria-hidden="true"></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" aria-current="page">home</a></li>
+      <li><a href="about.html">about</a></li>
+      <li><a href="projects.html">projects</a></li>
+      <li><a href="planner.html">planner</a></li>
+      <li><a href="contact.html">contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section class="container hero">
+    <div class="hero-copy">
+      <span class="eyebrow">B.Sc. Cybersecurity · Miva Open University</span>
+      <h1>Hello everyone, welcome to my page — I'm <span class="accent">Francisco</span>.</h1>
+      <p class="hero-lede">
+        This is my lab assessment for COS 106: Introduction to Web Technologies,
+        thanks for viewing my portfolio. I'm a first-year cybersecurity student
+        building my way toward a career in digital forensics, threat intelligence,
+        and SOC analysis — one lab, one line of code, and one CTF at a time.
+      </p>
+      <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+        <a href="about.html" class="btn btn-primary">Read my story</a>
+        <a href="projects.html" class="btn btn-ghost">View projects</a>
+      </div>
+
+      <!-- Signature element: a "whoami" terminal panel introducing the student -->
+      <div class="terminal" role="img" aria-label="Terminal window introducing Francisco">
+        <div class="terminal-bar">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot amber"></span>
+          <span class="terminal-dot green"></span>
+          <span class="terminal-title">francisco@miva:~$</span>
+        </div>
+        <div class="terminal-body">
+          <div class="line"><span class="prompt-sym">$</span><span>whoami</span></div>
+          <div class="line out">Godwin "Francisco" Chukwunonso</div>
+          <div class="line"><span class="prompt-sym">$</span><span>cat status.txt</span></div>
+          <div class="line out">role: <span class="key">100L Cybersecurity Student</span></div>
+          <div class="line out">base: <span class="key">Jalingo, Taraba State, Nigeria</span></div>
+          <div class="line out">focus: <span class="key">Digital Forensics · Threat Intel · SOC</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Photo placeholder styled as a status card -->
+    <div class="photo-card">
+      <div class="frame">
+        <!-- Replace this img src with your own professional photo, e.g. assets/img/francisco.jpg -->
+        <img src="https://images.unsplash.com/photo-1614289371518-722f2615943d?q=80&w=800&auto=format&fit=crop" alt="Placeholder photo of Francisco — replace with your own professional photograph">
+      </div>
+      <div class="caption">
+        <span><span class="status-dot" aria-hidden="true"></span>available for internships</span>
+        <span>NG</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BIOGRAPHY ============ -->
+  <section class="container">
+    <div class="card" style="max-width:70ch;">
+      <span class="eyebrow">Brief biography</span>
+      <p style="color:var(--text); font-size:1.02rem;">
+        I was a student of Holy Family Secondary School, where an early curiosity
+        about how systems break — and how they're defended — set the direction for
+        everything that came after. That curiosity turned into a decision to study
+        cybersecurity formally, and today I'm building the technical foundation
+        (networking, operating systems, programming, and now web development
+        through this very course) that a security specialist needs. Outside the
+        classroom, I run an online learning community and stay close to the
+        practical side of tech through gaming and the DeFi ecosystem.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ CYBERSECURITY FOCUS PANEL ============ -->
+  <section class="container">
+    <div class="focus-panel">
+      <div class="focus-panel-head">
+        <h2>Cybersecurity focus areas</h2>
+        <span class="eyebrow" style="margin:0;">current skill trajectory</span>
+      </div>
+      <div class="focus-grid">
+
+        <div class="focus-card">
+          <div class="focus-card-top">
+            <h3>Digital Forensics</h3>
+            <span class="level-badge building">BUILDING</span>
+          </div>
+          <p>Investigating artifacts, timelines, and evidence handling — learning to reconstruct what happened after an incident.</p>
+          <div class="progress-track"><div class="progress-fill" style="width:35%;"></div></div>
+        </div>
+
+        <div class="focus-card">
+          <div class="focus-card-top">
+            <h3>Threat Intelligence</h3>
+            <span class="level-badge building">BUILDING</span>
+          </div>
+          <p>Tracking indicators of compromise and attacker behavior to understand threats before they become incidents.</p>
+          <div class="progress-track"><div class="progress-fill" style="width:30%;"></div></div>
+        </div>
+
+        <div class="focus-card">
+          <div class="focus-card-top">
+            <h3>SOC Analysis</h3>
+            <span class="level-badge advancing">ADVANCING</span>
+          </div>
+          <p>Monitoring, triage, and alert response — the front line of a security operations center.</p>
+          <div class="progress-track"><div class="progress-fill" style="width:45%;"></div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><span class="prompt">$</span> echo "Godwin Chukwunonso · B.Sc. Cybersecurity · Miva Open University"</div>
+      <ul class="social-row">
+        <li><a href="https://github.com/" target="_blank" rel="noopener">github</a></li>
+        <li><a href="https://linkedin.com/" target="_blank" rel="noopener">linkedin</a></li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
+    </div>
+    <p class="copyright">Copyright 2025 MIVA Open University. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
