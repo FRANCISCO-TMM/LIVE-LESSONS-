@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Me — Francisco</title>
-<meta name="description" content="Educational background, career aspirations, technical skills and interests of Francisco, B.Sc. Cybersecurity student.">
+<title>About Me — Godwin Chukwunonso</title>
+<meta name="description" content="Educational background, career aspirations, technical skills and interests of Godwin Chukwunonso, B.Sc. Cybersecurity student.">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,47 +12,60 @@
 <header class="site-header">
   <div class="container nav">
     <a href="index.html" class="nav-brand" aria-label="Home">
-      <span class="prompt">~/francisco</span><span class="cursor" aria-hidden="true"></span>
+      <span class="dot" aria-hidden="true"></span> Godwin Chukwunonso
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
       <span></span>
     </button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">home</a></li>
-      <li><a href="about.html" aria-current="page">about</a></li>
-      <li><a href="projects.html">projects</a></li>
-      <li><a href="planner.html">planner</a></li>
-      <li><a href="contact.html">contact</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" aria-current="page">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="planner.html">Planner</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
 </header>
 
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="ok">SOC feed nominal — 0 unresolved alerts</span>
+    <span class="warn">Threat radar — new phishing campaign flagged</span>
+    <span class="ok">Forensics — disk image hash verified</span>
+    <span class="ok">Perimeter — firewall rule patched</span>
+    <span class="ok">SOC feed nominal — 0 unresolved alerts</span>
+    <span class="warn">Threat radar — new phishing campaign flagged</span>
+    <span class="ok">Forensics — disk image hash verified</span>
+    <span class="ok">Perimeter — firewall rule patched</span>
+  </div>
+</div>
+
 <main>
 
   <section class="container page-head">
-    <span class="eyebrow">./about</span>
-    <h1>About me</h1>
-    <p>The short version: a Holy Family Secondary School graduate turned cybersecurity
-      student, currently splitting focus between formal coursework and self-directed
-      practice in forensics, threat intel, and SOC work.</p>
+    <span class="eyebrow">About</span>
+    <h1>The file on me</h1>
+    <p>Holy Family Secondary School graduate turned cybersecurity student, currently
+      splitting focus between formal coursework and self-directed practice in
+      forensics, threat intel, and SOC work.</p>
   </section>
 
   <!-- ============ AUDIO WELCOME NOTE (multimedia requirement) ============ -->
   <section class="container">
     <div class="media-block">
-      <span class="media-label">🎧 welcome_note.mp3</span>
+      <span class="media-label">🎤 Audio Introduction — <span class="who">Godwin Chukwunonso</span></span>
       <audio controls preload="none">
-        <!-- Add your own recorded welcome note at this path, e.g. assets/audio/welcome-note.mp3 -->
+        <!-- Add your own recorded introduction at this path, e.g. assets/audio/welcome-note.mp3 -->
         <source src="assets/audio/welcome-note.mp3" type="audio/mpeg">
-        Your browser does not support the audio element. A short spoken introduction
-        from Francisco would play here once the audio file is added.
+        Your browser does not support the audio element.
       </audio>
     </div>
   </section>
 
   <!-- ============ EDUCATION TIMELINE ============ -->
   <section class="container">
-    <h2>Educational background</h2>
+    <span class="eyebrow">Record</span>
+    <h2 style="margin-bottom:1.5rem;">Educational background</h2>
     <div class="timeline">
       <div class="timeline-item">
         <span class="timeline-meta">2025 — present</span>
@@ -77,7 +90,8 @@
 
   <!-- ============ COURSE SCHEDULE TABLE ============ -->
   <section class="container">
-    <h2>Current course schedule</h2>
+    <span class="eyebrow">Schedule</span>
+    <h2 style="margin-bottom:1.5rem;">Current course schedule</h2>
     <div class="table-wrap">
       <table>
         <caption>100-Level Cybersecurity — sample weekly schedule</caption>
@@ -127,8 +141,9 @@
 
   <!-- ============ CAREER ASPIRATIONS ============ -->
   <section class="container">
-    <h2>Career aspirations</h2>
-    <div class="card" style="max-width:75ch;">
+    <span class="eyebrow">Trajectory</span>
+    <h2 style="margin-bottom:1.5rem;">Career aspirations</h2>
+    <div class="info-card" style="max-width:75ch;">
       <p style="color:var(--text); font-size:1.02rem; margin-bottom:0;">
         My goal is to become a Cybersecurity Specialist working across digital
         forensics, SOC analysis, and threat intelligence — the roles that sit
@@ -141,17 +156,18 @@
 
   <!-- ============ TECHNICAL SKILLS ============ -->
   <section class="container">
-    <h2>Technical skills</h2>
+    <span class="eyebrow">Toolkit</span>
+    <h2 style="margin-bottom:1.5rem;">Technical skills</h2>
     <div class="card-grid cols-3">
-      <div class="card">
+      <div class="info-card">
         <h3>Languages &amp; Markup</h3>
         <div><span class="badge">HTML5</span><span class="badge">CSS3</span><span class="badge">JavaScript ES6+</span><span class="badge">Python</span></div>
       </div>
-      <div class="card">
+      <div class="info-card">
         <h3>Tooling</h3>
         <div><span class="badge">Git</span><span class="badge">GitHub</span><span class="badge">VS Code</span><span class="badge">Linux CLI</span></div>
       </div>
-      <div class="card">
+      <div class="info-card">
         <h3>Foundations</h3>
         <div><span class="badge">Networking basics</span><span class="badge">OS security</span><span class="badge">Threat concepts</span></div>
       </div>
@@ -160,19 +176,20 @@
 
   <!-- ============ HOBBIES ============ -->
   <section class="container">
-    <h2>Hobbies &amp; interests</h2>
+    <span class="eyebrow">Off duty</span>
+    <h2 style="margin-bottom:1.5rem;">Hobbies &amp; interests</h2>
     <div class="card-grid cols-3">
-      <div class="card">
+      <div class="info-card">
         <h3>Competitive gaming</h3>
-        <p style="margin:0;">Active in eFootball, Call of Duty Mobile, and Mortal Kombat — games that reward the same pattern-recognition and quick decision-making that security work does.</p>
+        <p>Active in eFootball, Call of Duty Mobile, and Mortal Kombat — games that reward the same pattern-recognition and quick decision-making that security work does.</p>
       </div>
-      <div class="card">
+      <div class="info-card">
         <h3>Prestige Academy</h3>
-        <p style="margin:0;">I manage Prestige Academy, an online educational community, handling coordination, moderation, and member support.</p>
+        <p>I manage Prestige Academy, an online educational community, handling coordination, moderation, and member support.</p>
       </div>
-      <div class="card">
+      <div class="info-card">
         <h3>Crypto &amp; DeFi</h3>
-        <p style="margin:0;">Active participant in the cryptocurrency and DeFi ecosystem, which feeds directly into my interest in wallet security and decentralized systems.</p>
+        <p>Active participant in the cryptocurrency and DeFi ecosystem, which feeds directly into my interest in wallet security and decentralized systems.</p>
       </div>
     </div>
   </section>
@@ -182,11 +199,11 @@
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand"><span class="prompt">$</span> echo "Godwin Chukwunonso · B.Sc. Cybersecurity · Miva Open University"</div>
+      <div class="footer-brand"><span class="amber">◆</span> Godwin Chukwunonso · B.Sc. Cybersecurity · Miva Open University</div>
       <ul class="social-row">
-        <li><a href="https://github.com/" target="_blank" rel="noopener">github</a></li>
-        <li><a href="https://linkedin.com/" target="_blank" rel="noopener">linkedin</a></li>
-        <li><a href="contact.html">contact</a></li>
+        <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
     <p class="copyright">Copyright 2025 MIVA Open University. All Rights Reserved.</p>
