@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Francisco</title>
+<meta name="description" content="Get in touch with Francisco, B.Sc. Cybersecurity student at Miva Open University.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="nav-brand" aria-label="Home">
+      <span class="prompt">~/francisco</span><span class="cursor" aria-hidden="true"></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">home</a></li>
+      <li><a href="about.html">about</a></li>
+      <li><a href="projects.html">projects</a></li>
+      <li><a href="planner.html">planner</a></li>
+      <li><a href="contact.html" aria-current="page">contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <section class="container page-head">
+    <span class="eyebrow">./contact</span>
+    <h1>Get in touch</h1>
+    <p>Questions, internship opportunities, or just want to talk cybersecurity? Send a message below.</p>
+  </section>
+
+  <section class="container">
+    <div class="contact-layout">
+
+      <!-- ============ CONTACT FORM ============ -->
+      <div class="card">
+        <div class="form-msg" id="formMsg" role="status" aria-live="polite"></div>
+        <form id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name">
+            <span class="field-error" id="nameError"></span>
+          </div>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input type="text" id="email" name="email" placeholder="you@example.com">
+            <span class="field-error" id="emailError"></span>
+          </div>
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input type="text" id="phone" name="phone" placeholder="Digits only, e.g. 08012345678">
+            <span class="field-error" id="phoneError"></span>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="What would you like to say?"></textarea>
+            <span class="field-error" id="messageError"></span>
+          </div>
+          <button type="submit" class="btn btn-primary">Send message</button>
+        </form>
+      </div>
+
+      <!-- ============ CONTACT INFO ============ -->
+      <div>
+        <div class="contact-info-item">
+          <span class="ico" aria-hidden="true">@</span>
+          <div>
+            <strong>Email</strong>
+            <p style="margin:0;">francisco@example.com</p>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <span class="ico" aria-hidden="true">#</span>
+          <div>
+            <strong>Location</strong>
+            <p style="margin:0;">Jalingo, Taraba State, Nigeria</p>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <span class="ico" aria-hidden="true">&gt;_</span>
+          <div>
+            <strong>Availability</strong>
+            <p style="margin:0;">Open to internships and collaborative student projects.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><span class="prompt">$</span> echo "Godwin Chukwunonso · B.Sc. Cybersecurity · Miva Open University"</div>
+      <ul class="social-row">
+        <li><a href="https://github.com/" target="_blank" rel="noopener">github</a></li>
+        <li><a href="https://linkedin.com/" target="_blank" rel="noopener">linkedin</a></li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
+    </div>
+    <p class="copyright">Copyright 2025 MIVA Open University. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
