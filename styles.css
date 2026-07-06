@@ -287,6 +287,131 @@ section{ padding: 3.2rem 0; }
 .social-row a:hover{ color: var(--amber); }
 .copyright{ width:100%; text-align:center; font-family: var(--font-mono); font-size:0.7rem; color: var(--faint); margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid var(--border); }
 
+/* ==========================================================================
+   INNER-PAGE COMPONENTS (about / projects / planner / contact)
+   Extends the Ops Wall system above with the same tokens, fonts and radii.
+   ========================================================================== */
+
+/* --- Page header (used on every inner page) --------------------------------*/
+.page-head{ padding: 3.2rem 0 1rem; }
+.page-head h1{ font-size: clamp(2rem, 4vw, 2.8rem); }
+.page-head p{ max-width:60ch; }
+
+/* --- Generic card grid ------------------------------------------------------*/
+.card-grid{ display:grid; gap:1.4rem; }
+.cols-2{ grid-template-columns: repeat(2, 1fr); }
+.cols-3{ grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 900px){ .cols-2, .cols-3{ grid-template-columns: 1fr; } }
+.info-card{ background: var(--surface); border:1px solid var(--border); border-radius: var(--radius-md); padding:1.5rem; }
+.info-card h3{ font-size:1.05rem; text-transform:none; margin-bottom:0.5em; }
+.info-card p{ margin:0; font-size:0.92rem; }
+
+/* --- Badges (skills tags) ---------------------------------------------------*/
+.badge{
+  font-family: var(--font-mono); font-size:0.72rem;
+  padding:0.28rem 0.65rem; border-radius:99px;
+  background: var(--elevated); color: var(--blue);
+  border:1px solid var(--border-bright);
+  display:inline-block; margin:0 0.4rem 0.4rem 0;
+}
+
+/* --- Timeline (education history) -------------------------------------------*/
+.timeline{ border-left:2px solid var(--border); padding-left:1.6rem; display:flex; flex-direction:column; gap:1.9rem; }
+.timeline-item{ position:relative; }
+.timeline-item::before{
+  content:""; position:absolute; left:-1.68rem; top:0.35rem; width:11px; height:11px;
+  background: var(--bg); border:2px solid var(--amber);
+}
+.timeline-item h3{ font-size:1.05rem; text-transform:none; margin-bottom:0.15em; }
+.timeline-meta{ font-family: var(--font-mono); font-size:0.72rem; letter-spacing:0.06em; text-transform:uppercase; color: var(--amber); margin-bottom:0.5em; display:block; }
+
+/* --- Table (course schedule) -------------------------------------------------*/
+.table-wrap{ overflow-x:auto; border:1px solid var(--border); border-radius: var(--radius-md); }
+table{ width:100%; border-collapse:collapse; font-size:0.92rem; min-width:520px; }
+caption{ text-align:left; padding:0.9rem 1rem 0; font-family: var(--font-mono); color: var(--faint); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.06em; }
+thead th{
+  text-align:left; background: var(--surface); color: var(--amber);
+  font-family: var(--font-mono); font-size:0.72rem; letter-spacing:0.06em; text-transform:uppercase;
+  padding:0.85rem 1rem; border-bottom:1px solid var(--border);
+}
+tbody td{ padding:0.85rem 1rem; border-bottom:1px solid var(--border); color: var(--muted); }
+tbody tr:last-child td{ border-bottom:none; }
+tbody tr:hover{ background: var(--elevated); }
+
+/* --- Projects -----------------------------------------------------------------*/
+.project-card{
+  background: var(--surface); border:1px solid var(--border); border-radius: var(--radius-md);
+  overflow:hidden; display:flex; flex-direction:column;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.project-card:hover{ transform: translateY(-4px); border-color: var(--border-bright); }
+.project-shot{ aspect-ratio:16/10; overflow:hidden; background: var(--elevated); }
+.project-shot img{ width:100%; height:100%; object-fit:cover; transition: transform 0.4s ease; }
+.project-card:hover .project-shot img{ transform: scale(1.05); }
+.project-body{ padding:1.4rem; display:flex; flex-direction:column; gap:0.8rem; flex:1; }
+.project-body h3{ font-size:1.15rem; text-transform:none; margin:0; }
+.project-links{ display:flex; gap:0.75rem; margin-top:auto; padding-top:0.4rem; }
+.btn-sm{ padding:0.55rem 1rem; font-size:0.72rem; }
+
+/* --- Planner ------------------------------------------------------------------*/
+.planner-layout{ display:grid; grid-template-columns: 340px 1fr; gap:2rem; align-items:start; }
+@media (max-width: 900px){ .planner-layout{ grid-template-columns:1fr; } }
+
+.task-form{ display:flex; flex-direction:column; gap:1.1rem; }
+.field{ display:flex; flex-direction:column; gap:0.4rem; }
+.field label{ font-family: var(--font-mono); font-size:0.72rem; letter-spacing:0.05em; text-transform:uppercase; color: var(--faint); }
+input, textarea, select{
+  background: var(--elevated); border:1px solid var(--border-bright);
+  color: var(--text); border-radius: var(--radius-sm); padding:0.7rem 0.85rem;
+  font-family: var(--font-body); font-size:0.92rem;
+}
+input:focus, textarea:focus, select:focus{ border-color: var(--amber); }
+textarea{ resize:vertical; min-height:90px; }
+
+.task-stats{ display:flex; gap:1rem; font-family: var(--font-mono); font-size:0.74rem; text-transform:uppercase; letter-spacing:0.05em; color: var(--faint); margin-bottom:1.1rem; }
+.task-stats strong{ color: var(--amber); }
+
+.task-list{ display:flex; flex-direction:column; gap:0.75rem; }
+.task-item{
+  display:flex; align-items:flex-start; gap:0.9rem;
+  background: var(--surface); border:1px solid var(--border); border-radius: var(--radius-md);
+  padding:0.9rem 1rem;
+}
+.task-check{
+  width:20px; height:20px; border-radius:4px; border:2px solid var(--border-bright);
+  background:transparent; flex-shrink:0; margin-top:0.15rem;
+  display:flex; align-items:center; justify-content:center;
+  color: var(--bg); transition: background 0.15s ease, border-color 0.15s ease;
+}
+.task-check.checked{ background: var(--amber); border-color: var(--amber); }
+.task-main{ flex:1; }
+.task-title{ font-weight:500; }
+.task-meta{ font-family: var(--font-mono); font-size:0.7rem; color: var(--faint); margin-top:0.2rem; text-transform:uppercase; letter-spacing:0.04em; }
+.task-item.completed .task-title{ text-decoration: line-through; color: var(--faint); }
+.task-priority{ font-family: var(--font-mono); font-size:0.62rem; text-transform:uppercase; letter-spacing:0.05em; padding:0.18rem 0.55rem; border-radius:99px; height:fit-content; }
+.task-priority.high{ color: var(--red); border:1px solid rgba(239,83,80,0.4); background: rgba(239,83,80,0.08); }
+.task-priority.medium{ color: var(--amber); border:1px solid rgba(242,166,62,0.4); background: rgba(242,166,62,0.08); }
+.task-priority.low{ color: var(--green); border:1px solid rgba(76,175,125,0.4); background: rgba(76,175,125,0.08); }
+.task-delete{ background:none; border:none; color: var(--faint); font-size:1.1rem; padding:0.2rem; line-height:1; }
+.task-delete:hover{ color: var(--red); }
+.empty-state{ text-align:center; padding:2.5rem 1rem; color: var(--faint); font-family: var(--font-mono); font-size:0.82rem; text-transform:uppercase; letter-spacing:0.04em; border:1px dashed var(--border-bright); border-radius: var(--radius-md); }
+
+/* --- Contact ------------------------------------------------------------------*/
+.contact-layout{ display:grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items:start; }
+@media (max-width: 900px){ .contact-layout{ grid-template-columns:1fr; } }
+.form-msg{ font-family: var(--font-mono); font-size:0.82rem; padding:0.8rem 1rem; border-radius: var(--radius-sm); display:none; margin-bottom:1rem; }
+.form-msg.show{ display:block; }
+.form-msg.success{ background: rgba(76,175,125,0.1); color: var(--green); border:1px solid rgba(76,175,125,0.35); }
+.form-msg.error{ background: rgba(239,83,80,0.1); color: var(--red); border:1px solid rgba(239,83,80,0.35); }
+.field-error{ font-family: var(--font-mono); font-size:0.7rem; color: var(--red); min-height:1.1em; }
+input.invalid, textarea.invalid{ border-color: var(--red); }
+.contact-info-item{ display:flex; gap:0.9rem; margin-bottom:1.4rem; }
+.contact-info-item .ico{
+  width:38px; height:38px; border-radius: var(--radius-sm); background: var(--surface); border:1px solid var(--border);
+  display:flex; align-items:center; justify-content:center; color: var(--amber); font-family: var(--font-mono); flex-shrink:0;
+}
+.contact-info-item h4{ font-family: var(--font-body); font-weight:600; font-size:0.95rem; margin:0 0 0.2em; color: var(--text); text-transform:none; }
+
 @media (prefers-reduced-motion: reduce){
   *{ animation-duration:0.01ms !important; transition-duration:0.01ms !important; }
 }
