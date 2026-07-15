@@ -3,213 +3,151 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Me — Godwin Chukwunonso</title>
-<meta name="description" content="Educational background, career aspirations, technical skills and interests of Godwin Chukwunonso, B.Sc. Cybersecurity student.">
-<link rel="stylesheet" href="styles.css">
+<title>About Me — Elizabeth Ogugua</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="container nav">
-    <a href="index.html" class="nav-brand" aria-label="Home">
-      <span class="dot" aria-hidden="true"></span> Godwin Chukwunonso
-    </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
-      <span></span>
-    </button>
-    <ul class="nav-links" id="navLinks">
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="brand"><span class="dot">&lt;</span>Elizabeth.Ogugua<span class="dot">/&gt;</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" aria-current="page">About</a></li>
+      <li><a href="about.html">About</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="planner.html">Planner</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-  </div>
+  </nav>
 </header>
 
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track">
-    <span class="ok">SOC feed nominal — 0 unresolved alerts</span>
-    <span class="warn">Threat radar — new phishing campaign flagged</span>
-    <span class="ok">Forensics — disk image hash verified</span>
-    <span class="ok">Perimeter — firewall rule patched</span>
-    <span class="ok">SOC feed nominal — 0 unresolved alerts</span>
-    <span class="warn">Threat radar — new phishing campaign flagged</span>
-    <span class="ok">Forensics — disk image hash verified</span>
-    <span class="ok">Perimeter — firewall rule patched</span>
-  </div>
-</div>
-
 <main>
+  <section class="section" style="padding-bottom:2rem;">
+    <div class="section-head">
+      <p class="eyebrow">Get to know me</p>
+      <h1>About Me</h1>
+      <p>A curious mind, a keyboard, and a growing obsession with digital security — here's the story so far.</p>
+    </div>
 
-  <section class="container page-head">
-    <span class="eyebrow">About</span>
-    <h1>The file on me</h1>
-    <p>Holy Family Secondary School graduate turned cybersecurity student, currently
-      splitting focus between formal coursework and self-directed practice in
-      forensics, threat intel, and SOC work.</p>
-  </section>
+    <div class="about-grid">
+      <div class="about-photo">
+        <div class="avatar-frame" style="aspect-ratio:4/5;">
+          <div class="scan-line"></div>
+          <img src="images/image.jpeg" alt="Portrait of Elizabeth Ogugua" onerror="this.style.display='none'; this.parentElement.querySelector('.avatar-placeholder').style.display='block';">
+          <div class="avatar-placeholder" style="display:none;">
+            <div class="ring">👤</div>
+            Replace images/image.jpeg<br>with your photo
+          </div>
+        </div>
+        <div class="quote-chip">"Every line of code I write is a step closer to systems worth trusting."</div>
+      </div>
 
-  <!-- ============ AUDIO WELCOME NOTE (multimedia requirement) ============ -->
-  <section class="container">
-    <div class="media-block">
-      <span class="media-label">🎤 Audio Introduction — <span class="who">Godwin Chukwunonso</span></span>
-      <audio controls preload="none">
-        <!-- Add your own recorded introduction at this path, e.g. assets/audio/welcome-note.mp3 -->
-        <source src="Media/Lab-enhanced-v2.wav" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
+      <div class="about-copy">
+        <p class="eyebrow">Biography</p>
+        <h2>Hi, I'm Elizabeth!</h2>
+        <p>I am a <strong>first-year Cybersecurity student</strong> with a strong interest in protecting digital systems and exploring ethical hacking. I am passionate about learning the latest cybersecurity tools and techniques, and I am eager to apply my skills in practical projects and internships.</p>
+        <p>I thrive in collaborative environments, enjoy problem-solving, and am committed to continuous learning in the fast-evolving field of cybersecurity.</p>
+        <p>Outside of coursework, I spend my time <strong>gaming and learning</strong> — two habits that, more often than I expect, end up teaching me the same lesson: study the system, find the pattern, and keep going after the first failed attempt.</p>
+        <div class="hero-actions">
+          <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+          <a href="projects.html" class="btn btn-ghost">See My Work</a>
+        </div>
+
+        <!-- Multimedia requirement: short intro video -->
+        <div class="hud-panel media-panel">
+          <p class="eyebrow" style="margin-bottom:.6rem;">Watch</p>
+          <video controls poster="images/image.jpeg">
+            <source src="media/intro.mp4" type="video/mp4">
+            Your browser does not support embedded video.
+          </video>
+          <p class="media-caption">🎬 A short introduction video. Replace <code>media/intro.mp4</code> with your own recording.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ============ EDUCATION TIMELINE ============ -->
-  <section class="container">
-    <span class="eyebrow">Record</span>
-    <h2 style="margin-bottom:1.5rem;">Educational background</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <span class="timeline-meta">2025 — present</span>
-        <h3>B.Sc. Cybersecurity, 100 Level</h3>
-        <p>Miva Open University. Currently completing foundational courses across
-          web technologies, networking, and computing principles.</p>
+  <section class="section" style="padding-top:1rem;">
+    <div class="section-head">
+      <p class="eyebrow">Future goals</p>
+      <h2>Career Aspirations</h2>
+    </div>
+    <div class="grid-3">
+      <div class="hud-panel aspiration-card">
+        <div class="icon">🛡️</div>
+        <h3>Cybersecurity Professional</h3>
+        <p>Building a career centred on protecting systems, data, and people from digital threats.</p>
       </div>
-      <div class="timeline-item">
-        <span class="timeline-meta">In progress</span>
-        <h3>General Education Coursework</h3>
-        <p>University of the People — pursuing complementary coursework alongside
-          the cybersecurity degree.</p>
+      <div class="hud-panel aspiration-card">
+        <div class="icon">💻</div>
+        <h3>Software Development</h3>
+        <p>Growing my ability to build secure, innovative, and user-friendly digital solutions from the ground up.</p>
       </div>
-      <div class="timeline-item">
-        <span class="timeline-meta">Secondary education</span>
-        <h3>Holy Family Secondary School</h3>
-        <p>Completed secondary education, where an early interest in how computer
-          systems work first took shape.</p>
+      <div class="hud-panel aspiration-card">
+        <div class="icon">📡</div>
+        <h3>Lifelong Learning</h3>
+        <p>Continuously expanding my knowledge and gaining practical experience to make a real impact through technology.</p>
       </div>
     </div>
+    <p style="max-width:70ch;margin-top:1.5rem;">My aspiration is to build a successful career in the technology industry, with a focus on cybersecurity and software development. I aim to continuously expand my knowledge, gain practical experience, and contribute to creating secure, innovative, and user-friendly digital solutions. I am committed to lifelong learning and to making a positive impact through technology.</p>
   </section>
 
-  <!-- ============ COURSE SCHEDULE TABLE ============ -->
-  <section class="container">
-    <span class="eyebrow">Schedule</span>
-    <h2 style="margin-bottom:1.5rem;">Current course schedule</h2>
-    <div class="table-wrap">
+  <section class="section" style="padding-top:1rem;">
+    <div class="section-head">
+      <p class="eyebrow">Academic background</p>
+      <h2>Educational History</h2>
+    </div>
+    <div class="hud-panel" style="padding:0;overflow-x:auto;">
       <table>
-        <caption>100-Level Cybersecurity — sample weekly schedule</caption>
         <thead>
           <tr>
-            <th scope="col">Course code</th>
-            <th scope="col">Course title</th>
-            <th scope="col">Day</th>
-            <th scope="col">Time</th>
+            <th scope="col">Institution</th>
+            <th scope="col">Qualification</th>
+            <th scope="col">Year</th>
+            <th scope="col">Location</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>COS 106</td>
-            <td>Introduction to Web Technologies</td>
-            <td>Monday</td>
-            <td>10:00 – 12:00</td>
+            <td class="name">MIVA Open University</td>
+            <td>B.Sc. Cybersecurity (in progress)</td>
+            <td>2025 – Present</td>
+            <td>Nigeria (Online)</td>
           </tr>
           <tr>
-            <td>CYB 101</td>
-            <td>Foundations of Cybersecurity</td>
-            <td>Tuesday</td>
-            <td>09:00 – 11:00</td>
-          </tr>
-          <tr>
-            <td>CSC 102</td>
-            <td>Computer Networks I</td>
-            <td>Wednesday</td>
-            <td>13:00 – 15:00</td>
-          </tr>
-          <tr>
-            <td>MTH 101</td>
-            <td>Mathematics for Computing</td>
-            <td>Thursday</td>
-            <td>10:00 – 12:00</td>
-          </tr>
-          <tr>
-            <td>GST 105</td>
-            <td>Use of English</td>
-            <td>Friday</td>
-            <td>09:00 – 10:30</td>
+            <td class="name">St. Theresa's Girls College</td>
+            <td>Secondary Education (SSCE)</td>
+            <td>Completed</td>
+            <td>Jos, Plateau State</td>
           </tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <!-- ============ CAREER ASPIRATIONS ============ -->
-  <section class="container">
-    <span class="eyebrow">Trajectory</span>
-    <h2 style="margin-bottom:1.5rem;">Career aspirations</h2>
-    <div class="info-card" style="max-width:75ch;">
-      <p style="color:var(--text); font-size:1.02rem; margin-bottom:0;">
-        My goal is to become a Cybersecurity Specialist working across digital
-        forensics, SOC analysis, and threat intelligence — the roles that sit
-        closest to real, active defense. After completing my undergraduate degree,
-        I plan to pursue a Master's degree in the UK to deepen that specialization
-        and gain exposure to a more mature security industry.
-      </p>
+  <section class="section" style="padding-top:1rem;">
+    <div class="section-head">
+      <p class="eyebrow">Beyond the screen</p>
+      <h2>Hobbies &amp; Interests</h2>
     </div>
+    <ul class="list-check" style="max-width:60ch;">
+      <li>Gaming — strategy and puzzle games that sharpen pattern recognition</li>
+      <li>Learning — courses, tutorials, and hands-on experiments in tech and security</li>
+    </ul>
   </section>
-
-  <!-- ============ TECHNICAL SKILLS ============ -->
-  <section class="container">
-    <span class="eyebrow">Toolkit</span>
-    <h2 style="margin-bottom:1.5rem;">Technical skills</h2>
-    <div class="card-grid cols-3">
-      <div class="info-card">
-        <h3>Languages &amp; Markup</h3>
-        <div><span class="badge">HTML5</span><span class="badge">CSS3</span><span class="badge">JavaScript ES6+</span><span class="badge">Python</span></div>
-      </div>
-      <div class="info-card">
-        <h3>Tooling</h3>
-        <div><span class="badge">Git</span><span class="badge">GitHub</span><span class="badge">VS Code</span><span class="badge">Linux CLI</span></div>
-      </div>
-      <div class="info-card">
-        <h3>Foundations</h3>
-        <div><span class="badge">Networking basics</span><span class="badge">OS security</span><span class="badge">Threat concepts</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ HOBBIES ============ -->
-  <section class="container">
-    <span class="eyebrow">Off duty</span>
-    <h2 style="margin-bottom:1.5rem;">Hobbies &amp; interests</h2>
-    <div class="card-grid cols-3">
-      <div class="info-card">
-        <h3>Competitive gaming</h3>
-        <p>Active in eFootball, Call of Duty Mobile, and Mortal Kombat — games that reward the same pattern-recognition and quick decision-making that security work does.</p>
-      </div>
-      <div class="info-card">
-        <h3>Prestige Academy</h3>
-        <p>I manage Prestige Academy, an online educational community, handling coordination, moderation, and member support.</p>
-      </div>
-      <div class="info-card">
-        <h3>Crypto &amp; DeFi</h3>
-        <p>Active participant in the cryptocurrency and DeFi ecosystem, which feeds directly into my interest in wallet security and decentralized systems.</p>
-      </div>
-    </div>
-  </section>
-
 </main>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand"><span class="amber">◆</span> Godwin Chukwunonso · B.Sc. Cybersecurity · Miva Open University</div>
-      <ul class="social-row">
-        <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <p class="copyright">Copyright 2025 MIVA Open University. All Rights Reserved.</p>
+<footer>
+  <div class="foot-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="planner.html">Planner</a>
+    <a href="contact.html">Contact</a>
   </div>
+  <p class="copyright">© 2026 Elizabeth Ogugua · COS 106 Term Project · MIVA Open University</p>
 </footer>
 
-<script src="script.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
