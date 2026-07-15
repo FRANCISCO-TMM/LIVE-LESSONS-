@@ -3,320 +3,109 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Godwin Chukwunonso — Cybersecurity Student Portfolio</title>
-<meta name="description" content="Personal academic portfolio of Godwin Chukwunonso, B.Sc. Cybersecurity student — digital forensics, threat intelligence, and SOC analysis.">
-<link rel="stylesheet" href="styles.css">
+<title>Elizabeth Ogugua — Cybersecurity Student Portfolio</title>
+<meta name="description" content="Personal academic portfolio of Elizabeth Ogugua, Cybersecurity student at MIVA Open University.">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- ============ HEADER / NAV ============ -->
-<header class="site-header">
-  <div class="container nav">
-    <a href="index.html" class="nav-brand" aria-label="Home">
-      <span class="dot" aria-hidden="true"></span> Godwin Chukwunonso
-    </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
-      <span></span>
-    </button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" aria-current="page">Home</a></li>
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="brand"><span class="dot">&lt;</span>Elizabeth.Ogugua<span class="dot">/&gt;</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="planner.html">Planner</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-  </div>
+  </nav>
 </header>
 
-<!-- ============ STATUS TICKER (signature motion) ============ -->
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track">
-    <span class="ok">SOC feed nominal — 0 unresolved alerts</span>
-    <span class="warn">Threat radar — new phishing campaign flagged</span>
-    <span class="ok">Forensics — disk image hash verified</span>
-    <span class="ok">Perimeter — firewall rule patched</span>
-    <span class="ok">SOC feed nominal — 0 unresolved alerts</span>
-    <span class="warn">Threat radar — new phishing campaign flagged</span>
-    <span class="ok">Forensics — disk image hash verified</span>
-    <span class="ok">Perimeter — firewall rule patched</span>
-  </div>
-</div>
-
 <main>
-
-  <!-- ============ HERO ============ -->
-  <section class="container hero">
+  <!-- HERO -->
+  <section class="hero">
     <div class="hero-copy">
-      <span class="eyebrow">100 Level · B.Sc. Cybersecurity · Miva Open University</span>
-      <h1>Building secure systems, <em>one careful line</em> at a time.</h1>
-      <p class="hero-lede">
-        I'm Godwin Chukwunonso — a 100-level Cybersecurity student passionate about
-        digital forensics, threat intelligence, and uncovering vulnerabilities to
-        build a more secure digital space.
-      </p>
+      <p class="eyebrow">root@eogugua:~$ whoami</p>
+      <h1>Securing the <span class="accent">digital frontier</span>, one system at a time.</h1>
+      <p class="lead">Hello! I'm Elizabeth Ogugua, a passionate student with a growing interest in technology, cybersecurity, and web development. I enjoy learning new skills, solving problems, and building responsive, user-friendly websites — while working toward becoming a skilled and dependable tech professional.</p>
       <div class="hero-actions">
-        <a href="projects.html" class="btn btn-primary">View my projects</a>
-        <a href="contact.html" class="btn btn-ghost">Get in touch</a>
+        <a href="projects.html" class="btn btn-primary">View My Projects</a>
+        <a href="contact.html" class="btn btn-ghost">Get In Touch</a>
       </div>
-      <div class="hero-meta">
-        <span class="live">Open to internships</span>
-        <span>100 Level</span>
-        <span>Abuja, Nigeria</span>
+      <div class="hero-stats">
+        <div class="stat"><b>3+</b><span>Projects Built</span></div>
+        <div class="stat"><b>100L</b><span>Current Level</span></div>
+        <div class="stat"><b>Cyber&nbsp;Sec</b><span>Focus Area</span></div>
       </div>
     </div>
 
-    <div>
-      <div class="radar-panel">
-        <div class="radar-sweep" aria-hidden="true"></div>
-        <div class="radar-photo">
-          <!-- Replace with your own professional photograph, e.g. assets/img/godwin.jpg -->
-          <img src="Media/Project.jpg" alt="Portrait placeholder for Godwin Chukwunonso — replace with your own photo">
-        </div>
-        <div class="field-note">
-          <span class="tag">A day I'm training for</span>
-          <p>5:14 AM. An alert fires — unusual outbound traffic from a quiet subnet. Three proxy hops, one spoofed login, and a very confused intern later, the trail goes cold… then cracks wide open. Case closed by sunrise. Coffee, mandatory.</p>
+    <div class="hero-card">
+      <div class="avatar-frame">
+        <div class="scan-line"></div>
+        <!-- Replace image.jpeg with your own photo in /images -->
+        <img src="images/image.jpeg" alt="Portrait of Elizabeth Ogugua" onerror="this.style.display='none'; this.parentElement.querySelector('.avatar-placeholder').style.display='block';">
+        <div class="avatar-placeholder" style="display:none;">
+          <div class="ring">👤</div>
+          Replace images/image.jpeg<br>with your photo
         </div>
       </div>
-      <p class="frame-caption">Project.jpg · <span class="hi">Portrait</span> · On file</p>
-    </div>
-  </section>
-
-  <!-- ============ LIVE STATUS GRID ============ -->
-  <section class="container">
-    <div class="status-grid">
-      <div class="status-card">
-        <span class="icon" aria-hidden="true">📡</span>
-        <span class="eyebrow">Live SOC feed</span>
-        <h3>Monitoring active</h3>
-        <p>Real-time log correlation across endpoints — zero unresolved alerts.</p>
+      <div class="badge-float">
+        <span class="lbl">Status</span>
+        <span class="val"><span class="status-dot"></span>Available for Internships</span>
       </div>
-      <div class="status-card">
-        <span class="icon" aria-hidden="true">🎯</span>
-        <span class="eyebrow">Threat radar</span>
-        <h3>Tracking activity</h3>
-        <p>New phishing campaign identified, targeting .edu domains.</p>
-      </div>
-      <div class="status-card">
-        <span class="icon" aria-hidden="true">🧾</span>
-        <span class="eyebrow">Digital forensics</span>
-        <h3>Evidence verified</h3>
-        <p>Disk image acquired — SHA-256 hash integrity confirmed.</p>
-      </div>
-      <div class="status-card">
-        <span class="icon" aria-hidden="true">🗺️</span>
-        <span class="eyebrow">Network map</span>
-        <h3>Perimeter secured</h3>
-        <p>Contained — root cause traced to a misconfigured firewall rule.</p>
+      <div class="hud-readout">
+        <div class="row"><span>SYSTEM</span><span>ONLINE</span></div>
+        <div class="row"><span>ROLE</span><span style="color:var(--cyan)">Cybersecurity Student</span></div>
+        <div class="row warn"><span>LEARNING_MODE</span><span>ACTIVE</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ============ BIO ============ -->
-  <section class="container">
-    <span class="eyebrow">Welcome</span>
-    <h2 style="margin-bottom:0.3em;">A little about how I got here</h2>
-    <p style="max-width:60ch; margin-bottom:2rem;">Short version: curiosity about how things break turned into a career plan for making sure they don't.</p>
-    <div class="split-cards">
-      <div class="plain-card">
-        <h3>The short bio</h3>
-        <p>I'm a 100-level Cybersecurity student at Miva Open University, passionate
-          about digital forensics, threat intelligence, and uncovering vulnerabilities
-          to build a more secure digital space. This site is my personal portfolio,
-          built with HTML, CSS, and JavaScript as part of my COS 106 Lab Assessment project.</p>
-      </div>
-      <div class="plain-card">
-        <h3>What I'm focused on right now</h3>
-        <p>I'm building a foundation in digital forensics, SOC analysis, and threat
-          intelligence, while volunteering as a coding mentor at a local secondary
-          school. Teaching younger students HTML and CSS has deepened my own
-          understanding more than anything else.</p>
-      </div>
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="section-head">
+      <p class="eyebrow">What I know</p>
+      <h2>Core Skills</h2>
+      <p>Technologies and tools I'm building fluency in, from the front end to the fundamentals of digital defence.</p>
+    </div>
+    <div class="grid-4">
+      <div class="hud-panel skill-card"><div class="icon">🌐</div><h4>HTML5</h4><span class="level">Intermediate</span></div>
+      <div class="hud-panel skill-card"><div class="icon">🎨</div><h4>CSS3</h4><span class="level">Intermediate</span></div>
+      <div class="hud-panel skill-card"><div class="icon">⚡</div><h4>JavaScript</h4><span class="level">Beginner</span></div>
+      <div class="hud-panel skill-card"><div class="icon">🛡️</div><h4>Cybersecurity Fundamentals</h4><span class="level">Beginner</span></div>
+      <div class="hud-panel skill-card"><div class="icon">🕵️</div><h4>Ethical Hacking Basics</h4><span class="level">Beginner</span></div>
+      <div class="hud-panel skill-card"><div class="icon">🔌</div><h4>Networking</h4><span class="level">Beginner</span></div>
+      <div class="hud-panel skill-card"><div class="icon">🐧</div><h4>Linux Fundamentals</h4><span class="level">Beginner</span></div>
+      <div class="hud-panel skill-card"><div class="icon">🔧</div><h4>Git &amp; GitHub</h4><span class="level">Beginner</span></div>
     </div>
   </section>
 
-  <!-- ============ CORE SKILLS ============ -->
-  <section class="container">
-    <span class="eyebrow">What I know</span>
-    <h2 style="margin-bottom:0.3em;">Core skills</h2>
-    <p style="max-width:60ch; margin-bottom:2rem;">Technologies and tools I work with to defend systems and investigate threats.</p>
-
-    <div class="skill-group">
-      <div class="skill-group-label">Security operations</div>
-      <div class="skill-row">
-        <div class="skill-card">
-          <span class="icon" aria-hidden="true">🌐</span>
-          <h4>Network Security</h4>
-          <p>Segmenting, monitoring, and hardening networks against intrusion.</p>
-          <span class="tier">Advanced</span>
-        </div>
-        <div class="skill-card">
-          <span class="icon" aria-hidden="true">🔍</span>
-          <h4>Digital Forensics</h4>
-          <p>Recovering and analyzing digital evidence after a security incident.</p>
-          <span class="tier">Advanced</span>
-        </div>
-        <div class="skill-card">
-          <span class="icon" aria-hidden="true">🛰️</span>
-          <h4>SOC Monitoring</h4>
-          <p>Watching live traffic and alerts to catch threats as they happen.</p>
-          <span class="tier">Intermediate</span>
-        </div>
-        <div class="skill-card">
-          <span class="icon" aria-hidden="true">🕵️</span>
-          <h4>Threat Intelligence</h4>
-          <p>Tracking malicious actors and emerging attack patterns.</p>
-          <span class="tier">Advanced</span>
-        </div>
+  <!-- INTRO STRIP -->
+  <section class="section" style="padding-top:0;">
+    <div class="hud-panel" style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap;justify-content:space-between;">
+      <div>
+        <p class="eyebrow" style="margin-bottom:.4rem;">Introduction</p>
+        <h3>A curious mind entering the world of digital defence.</h3>
+        <p style="margin-top:.5rem;max-width:60ch;">I'm a first-year Cybersecurity student at MIVA Open University, based in Jos, Plateau State — learning to think like both a builder and a defender.</p>
       </div>
-    </div>
-
-    <div class="skill-group">
-      <div class="skill-group-label">Programming &amp; tools</div>
-      <div class="skill-row">
-        <div class="skill-card">
-          <span class="icon" aria-hidden="true">🐍</span>
-          <h4>Python</h4>
-          <p>Writing scripts for automation, log parsing, and security tooling.</p>
-          <span class="tier">Security scripting</span>
-        </div>
-        <div class="skill-card">
-          <span class="icon" aria-hidden="true">🐧</span>
-          <h4>Linux &amp; CLI</h4>
-          <p>Comfortable navigating, scripting, and hardening Linux systems.</p>
-          <span class="tier">Advanced</span>
-        </div>
-        <div class="skill-card">
-          <span class="icon" aria-hidden="true">🔀</span>
-          <h4>Git &amp; GitHub</h4>
-          <p>Version control, branching, and collaborative code review.</p>
-          <span class="tier">Version control</span>
-        </div>
-        <div class="skill-card">
-          <span class="icon" aria-hidden="true">🧰</span>
-          <h4>VS Code</h4>
-          <p>My daily driver for scripting, debugging, and documentation.</p>
-          <span class="tier">Advanced</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="media-block">
-      <span class="media-label">🎤 Audio Introduction — <span class="who">Godwin Chukwunonso</span></span>
-      <audio controls preload="none">
-        <!-- Add your own recorded introduction at this path, e.g. assets/audio/welcome-note.mp3 -->
-        <source src="assets/audio/welcome-note.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
+      <a href="about.html" class="btn btn-ghost">Read My Story</a>
     </div>
   </section>
-
-  <!-- ============ CORE EXPERTISE ============ -->
-  <section class="section-invert">
-    <div class="container">
-      <span class="eyebrow">Core expertise</span>
-      <h2 style="margin-bottom:0.3em;">Where I focus my energy</h2>
-      <p style="max-width:60ch; margin-bottom:2rem;">Four areas I'm actively building toward as a cybersecurity student.</p>
-      <div class="focus-row">
-        <div class="focus-card">
-          <h3>Digital Forensics</h3>
-          <p>Recovering, preserving, and analyzing digital evidence after an incident.</p>
-        </div>
-        <div class="focus-card">
-          <h3>Threat Intelligence</h3>
-          <p>Tracking attacker behavior and emerging threats before they strike.</p>
-        </div>
-        <div class="focus-card">
-          <h3>SOC Operations</h3>
-          <p>Monitoring live traffic and alerts to catch intrusions as they happen.</p>
-        </div>
-        <div class="focus-card">
-          <h3>Network Defense</h3>
-          <p>Segmenting, hardening, and securing infrastructure against attack.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ SECURITY PRINCIPLES ============ -->
-  <section class="container" style="text-align:center;">
-    <span class="eyebrow" style="justify-content:center;">What guides me</span>
-    <h2 style="margin-bottom:1.5rem;">Security principles</h2>
-    <div class="pill-row">
-      <span class="pill">🔓 Zero Trust</span>
-      <span class="pill">🛡️ Defense in Depth</span>
-      <span class="pill">🔑 Least Privilege</span>
-      <span class="pill">👁️ Continuous Vigilance</span>
-      <span class="pill">⚖️ Ethical Responsibility</span>
-    </div>
-  </section>
-
-  <!-- ============ STATS ============ -->
-  <section class="container">
-    <span class="eyebrow">By the numbers</span>
-    <h2 style="margin-bottom:1.5rem;">Practice &amp; learning so far</h2>
-    <div class="stat-row">
-      <div class="stat-card"><div class="stat-num">3+</div><div class="stat-label">Projects built</div></div>
-      <div class="stat-card"><div class="stat-num">25+</div><div class="stat-label">CTF challenges attempted</div></div>
-      <div class="stat-card"><div class="stat-num">10+</div><div class="stat-label">Security scripts written</div></div>
-      <div class="stat-card"><div class="stat-num">4.71</div><div class="stat-label">Current GPA</div></div>
-    </div>
-  </section>
-
-  <!-- ============ CERTIFICATIONS ============ -->
-  <section class="container">
-    <span class="eyebrow">Credentials</span>
-    <h2 style="margin-bottom:0.3em;">Certifications</h2>
-    <p style="max-width:60ch; margin-bottom:2rem;">Currently studying toward these — added here as goals, not yet earned.</p>
-    <div class="cert-row">
-      <div class="cert-card">
-        <span class="cert-badge" aria-hidden="true">🛡️</span>
-        <div>
-          <h4>CompTIA Security+</h4>
-          <span class="cert-status progress">In progress</span>
-        </div>
-      </div>
-      <div class="cert-card">
-        <span class="cert-badge" aria-hidden="true">🎯</span>
-        <div>
-          <h4>Certified Ethical Hacker (CEH)</h4>
-          <span class="cert-status">Planned</span>
-        </div>
-      </div>
-      <div class="cert-card">
-        <span class="cert-badge" aria-hidden="true">📶</span>
-        <div>
-          <h4>Cisco CyberOps Associate</h4>
-          <span class="cert-status">Planned</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ QUOTE ============ -->
-  <section class="quote-section">
-    <div class="container">
-      <blockquote>"Security isn't a product you install — it's a discipline you practice, one careful decision at a time."</blockquote>
-      <cite>— Godwin Chukwunonso</cite>
-    </div>
-  </section>
-
 </main>
 
-<!-- ============ FOOTER ============ -->
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand"><span class="amber">◆</span> Godwin Chukwunonso · B.Sc. Cybersecurity · Miva Open University</div>
-      <ul class="social-row">
-        <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <p class="copyright">Copyright 2025 MIVA Open University. All Rights Reserved.</p>
+<footer>
+  <div class="foot-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="planner.html">Planner</a>
+    <a href="contact.html">Contact</a>
   </div>
+  <p class="copyright">© 2026 Elizabeth Ogugua · COS 106 Term Project · MIVA Open University</p>
 </footer>
 
-<script src="script.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
