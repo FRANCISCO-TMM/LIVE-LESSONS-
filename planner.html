@@ -3,111 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Academic Planner — Godwin Chukwunonso</title>
-<meta name="description" content="Interactive academic task planner for tracking assignments, deadlines, and study sessions.">
-<link rel="stylesheet" href="styles.css">
+<title>Academic Planner — Elizabeth Ogugua</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="container nav">
-    <a href="index.html" class="nav-brand" aria-label="Home">
-      <span class="dot" aria-hidden="true"></span> Godwin Chukwunonso
-    </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
-      <span></span>
-    </button>
-    <ul class="nav-links" id="navLinks">
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="brand"><span class="dot">&lt;</span>Elizabeth.Ogugua<span class="dot">/&gt;</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="projects.html">Projects</a></li>
-      <li><a href="planner.html" aria-current="page">Planner</a></li>
+      <li><a href="planner.html">Planner</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-  </div>
+  </nav>
 </header>
 
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track">
-    <span class="ok">SOC feed nominal — 0 unresolved alerts</span>
-    <span class="warn">Threat radar — new phishing campaign flagged</span>
-    <span class="ok">Forensics — disk image hash verified</span>
-    <span class="ok">Perimeter — firewall rule patched</span>
-    <span class="ok">SOC feed nominal — 0 unresolved alerts</span>
-    <span class="warn">Threat radar — new phishing campaign flagged</span>
-    <span class="ok">Forensics — disk image hash verified</span>
-    <span class="ok">Perimeter — firewall rule patched</span>
-  </div>
-</div>
-
 <main>
-
-  <section class="container page-head">
-    <span class="eyebrow">Planner</span>
-    <h1>Academic planner</h1>
-    <p>Track assignment deadlines and study sessions in one place. Tasks are kept in
-      the browser's local storage, so your list is still here the next time you visit.</p>
-  </section>
-
-  <section class="container">
-    <div class="planner-layout">
-
-      <!-- ============ ADD TASK FORM ============ -->
-      <aside class="info-card">
-        <h2 style="font-size:1.1rem; text-transform:none;">Add a task</h2>
-        <form id="taskForm" class="task-form">
-          <div class="field">
-            <label for="taskTitle">Task</label>
-            <input type="text" id="taskTitle" name="taskTitle" placeholder="e.g. COS 106 assignment 2" required>
-          </div>
-          <div class="field">
-            <label for="taskDue">Due date</label>
-            <input type="date" id="taskDue" name="taskDue">
-          </div>
-          <div class="field">
-            <label for="taskPriority">Priority</label>
-            <select id="taskPriority" name="taskPriority">
-              <option value="low">Low</option>
-              <option value="medium" selected>Medium</option>
-              <option value="high">High</option>
-            </select>
-          </div>
-          <button type="submit" class="btn btn-primary">Add task</button>
-        </form>
-      </aside>
-
-      <!-- ============ TASK LIST ============ -->
-      <div>
-        <div class="task-stats" id="taskStats">
-          <span><strong id="statTotal">0</strong> total</span>
-          <span><strong id="statDone">0</strong> completed</span>
-          <span><strong id="statPending">0</strong> pending</span>
-        </div>
-        <div class="task-list" id="taskList">
-          <!-- Tasks are rendered here by script.js -->
-          <div class="empty-state" id="emptyState">No tasks yet — add your first one on the left.</div>
-        </div>
-      </div>
-
+  <section class="section">
+    <div class="section-head">
+      <p class="eyebrow">Stay on track</p>
+      <h1>Academic Planner</h1>
+      <p>Track your assignments, deadlines, and study sessions. Tasks are saved locally so they persist across sessions.</p>
     </div>
-  </section>
 
-</main>
+    <div class="planner-stats">
+      <div class="hud-panel"><b id="totalStat">0</b><span>Total Tasks</span></div>
+      <div class="hud-panel"><b id="pendingStat">0</b><span>Pending</span></div>
+      <div class="hud-panel"><b id="completedStat">0</b><span>Completed</span></div>
+    </div>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand"><span class="amber">◆</span> Godwin Chukwunonso · B.Sc. Cybersecurity · Miva Open University</div>
-      <ul class="social-row">
-        <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="contact.html">Contact</a></li>
+    <form class="planner-controls" id="plannerForm" onsubmit="return false;">
+      <label for="taskInput" class="visually-hidden">New task</label>
+      <input type="text" id="taskInput" class="field" placeholder="Add a new task, e.g. 'Submit COS 106 assignment'">
+      <select id="prioritySelect" class="field">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+      <button type="button" id="addTaskBtn" class="btn btn-primary">+ Add Task</button>
+    </form>
+
+    <div class="filter-row">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="pending">Pending</button>
+      <button class="filter-btn" data-filter="completed">Completed</button>
+    </div>
+
+    <div class="task-list" id="taskList"></div>
+
+    <div class="empty-state" id="emptyState">
+      <div class="glyph">🗂️</div>
+      <p class="empty-text">No tasks logged yet. Add one above to get started.</p>
+    </div>
+
+    <div class="hud-panel tip-panel">
+      <h4>How to use the Planner</h4>
+      <ul>
+        <li>Type a task, choose a priority level, and click <strong>Add Task</strong> (or press Enter).</li>
+        <li>Click the circle on the left to mark a task as done.</li>
+        <li>Click the ✕ on the right to remove a task permanently.</li>
+        <li>Use the filter buttons to view All, Pending, or Completed tasks.</li>
+        <li>Your tasks are saved automatically in your browser — they'll be here when you return.</li>
       </ul>
     </div>
-    <p class="copyright">Copyright 2025 MIVA Open University. All Rights Reserved.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="foot-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="planner.html">Planner</a>
+    <a href="contact.html">Contact</a>
   </div>
+  <p class="copyright">© 2026 Elizabeth Ogugua · COS 106 Term Project · MIVA Open University</p>
 </footer>
 
-<script src="script.js"></script>
+<script src="js/main.js"></script>
+<script src="js/planner.js"></script>
 </body>
 </html>
