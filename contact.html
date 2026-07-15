@@ -3,126 +3,150 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — Godwin Chukwunonso</title>
-<meta name="description" content="Get in touch with Godwin Chukwunonso, B.Sc. Cybersecurity student at Miva Open University.">
-<link rel="stylesheet" href="styles.css">
+<title>Contact — Elizabeth Ogugua</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="container nav">
-    <a href="index.html" class="nav-brand" aria-label="Home">
-      <span class="dot" aria-hidden="true"></span> Godwin Chukwunonso
-    </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
-      <span></span>
-    </button>
-    <ul class="nav-links" id="navLinks">
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="brand"><span class="dot">&lt;</span>Elizabeth.Ogugua<span class="dot">/&gt;</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="planner.html">Planner</a></li>
-      <li><a href="contact.html" aria-current="page">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
-  </div>
+  </nav>
 </header>
 
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track">
-    <span class="ok">SOC feed nominal — 0 unresolved alerts</span>
-    <span class="warn">Threat radar — new phishing campaign flagged</span>
-    <span class="ok">Forensics — disk image hash verified</span>
-    <span class="ok">Perimeter — firewall rule patched</span>
-    <span class="ok">SOC feed nominal — 0 unresolved alerts</span>
-    <span class="warn">Threat radar — new phishing campaign flagged</span>
-    <span class="ok">Forensics — disk image hash verified</span>
-    <span class="ok">Perimeter — firewall rule patched</span>
-  </div>
-</div>
-
 <main>
+  <section class="section">
+    <div class="section-head">
+      <p class="eyebrow">Let's connect</p>
+      <h1>Get In Touch</h1>
+      <p>Whether you have a project idea, a question, or just want to say hello — my inbox is always open.</p>
+    </div>
 
-  <section class="container page-head">
-    <span class="eyebrow">Contact</span>
-    <h1>Get in touch</h1>
-    <p>Questions, internship opportunities, or just want to talk cybersecurity? Send a message below.</p>
-  </section>
+    <div class="contact-grid">
+      <div>
+        <h3 style="margin-bottom:1rem;">Contact Details</h3>
 
-  <section class="container">
-    <div class="contact-layout">
+        <div class="hud-panel contact-item">
+          <span class="ic">📧</span>
+          <div>
+            <div class="lbl">Email</div>
+            <div class="val"><a href="mailto:elizabethebbb2023@gmail.com">elizabethebbb2023@gmail.com</a></div>
+          </div>
+        </div>
 
-      <!-- ============ CONTACT FORM ============ -->
-      <div class="info-card">
-        <div class="form-msg" id="formMsg" role="status" aria-live="polite"></div>
+        <div class="hud-panel contact-item">
+          <span class="ic">📱</span>
+          <div>
+            <div class="lbl">Phone</div>
+            <div class="val"><a href="tel:+2349160888503">0916 088 8503</a> &nbsp;/&nbsp; <a href="tel:+2348126759097">0812 675 9097</a></div>
+          </div>
+        </div>
+
+        <div class="hud-panel contact-item">
+          <span class="ic">📍</span>
+          <div>
+            <div class="lbl">Location</div>
+            <div class="val">Jos, Plateau State, Nigeria</div>
+          </div>
+        </div>
+
+        <div class="hud-panel contact-item">
+          <span class="ic">💻</span>
+          <div>
+            <div class="lbl">GitHub</div>
+            <!-- Add your real GitHub profile link -->
+            <div class="val"><a href="https://github.com/" target="_blank" rel="noopener">github.com/your-username</a></div>
+          </div>
+        </div>
+
+        <div class="hud-panel opportunity-box">
+          <div class="lbl"><span class="status-dot"></span>Open to Opportunities</div>
+          <p style="font-size:.85rem;">Currently seeking internships and beginner-friendly cybersecurity or web projects.</p>
+        </div>
+      </div>
+
+      <div class="hud-panel">
+        <h3 style="margin-bottom:.3rem;">Send a Message</h3>
+        <p style="font-size:.85rem;margin-bottom:1.2rem;">All fields are required. I typically respond within 24 hours.</p>
+
+        <div class="form-success" id="formSuccess">✅ Message validated — thanks for reaching out! (Demo form: no data is actually sent.)</div>
+
         <form id="contactForm" novalidate>
-          <div class="field">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your full name">
-            <span class="field-error" id="nameError"></span>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="nameField">Full Name</label>
+              <input type="text" id="nameField" class="field" placeholder="Jane Smith">
+              <span class="error-msg" id="nameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="emailField">Email Address</label>
+              <input type="text" id="emailField" class="field" placeholder="jane@example.com">
+              <span class="error-msg" id="emailError"></span>
+            </div>
           </div>
-          <div class="field">
-            <label for="email">Email address</label>
-            <input type="text" id="email" name="email" placeholder="you@example.com">
-            <span class="field-error" id="emailError"></span>
+
+          <div class="form-group" style="margin-bottom:1rem;">
+            <label for="phoneField">Phone Number</label>
+            <input type="text" id="phoneField" class="field" placeholder="08012345678">
+            <span class="error-msg" id="phoneError"></span>
           </div>
-          <div class="field">
-            <label for="phone">Phone number</label>
-            <input type="text" id="phone" name="phone" placeholder="Digits only, e.g. 08012345678">
-            <span class="field-error" id="phoneError"></span>
+
+          <div class="form-group" style="margin-bottom:.4rem;">
+            <label for="messageField">Message</label>
+            <textarea id="messageField" class="field" placeholder="Hi Elizabeth, I'd like to discuss a project idea..."></textarea>
+            <span class="error-msg" id="messageError"></span>
           </div>
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="What would you like to say?"></textarea>
-            <span class="field-error" id="messageError"></span>
-          </div>
-          <button type="submit" class="btn btn-primary">Send message</button>
+
+          <p class="form-note">🔒 Your information is only used to respond to your enquiry and will never be shared with third parties.</p>
+
+          <button type="submit" class="btn btn-primary btn-block">Send Message →</button>
         </form>
       </div>
-
-      <!-- ============ CONTACT INFO ============ -->
-      <div>
-        <div class="contact-info-item">
-          <span class="ico" aria-hidden="true">@</span>
-          <div>
-            <h4>Email</h4>
-            <p style="margin:0;">godwin@example.com</p>
-          </div>
-        </div>
-        <div class="contact-info-item">
-          <span class="ico" aria-hidden="true">#</span>
-          <div>
-            <h4>Location</h4>
-            <p style="margin:0;">Abuja, Nigeria</p>
-          </div>
-        </div>
-        <div class="contact-info-item">
-          <span class="ico" aria-hidden="true">◎</span>
-          <div>
-            <h4>Availability</h4>
-            <p style="margin:0;">Open to internships and collaborative student projects.</p>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
 
+  <section class="section" style="padding-top:0;">
+    <div class="section-head">
+      <p class="eyebrow">Common questions</p>
+      <h2>FAQ</h2>
+    </div>
+    <div class="grid-3">
+      <details class="hud-panel faq-item" open>
+        <summary>Are you available for freelance work?</summary>
+        <p>Yes — I take on small, beginner-friendly web and security-adjacent projects during breaks.</p>
+      </details>
+      <details class="hud-panel faq-item">
+        <summary>What kind of projects excite you?</summary>
+        <p>Front-end web apps, student tools, and anything at the intersection of usability and security.</p>
+      </details>
+      <details class="hud-panel faq-item">
+        <summary>Can you work remotely?</summary>
+        <p>Absolutely. I'm comfortable collaborating remotely via email or messaging platforms.</p>
+      </details>
+    </div>
+  </section>
 </main>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand"><span class="amber">◆</span> Godwin Chukwunonso · B.Sc. Cybersecurity · Miva Open University</div>
-      <ul class="social-row">
-        <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <p class="copyright">Copyright 2025 MIVA Open University. All Rights Reserved.</p>
+<footer>
+  <div class="foot-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="planner.html">Planner</a>
+    <a href="contact.html">Contact</a>
   </div>
+  <p class="copyright">© 2026 Elizabeth Ogugua · COS 106 Term Project · MIVA Open University</p>
 </footer>
 
-<script src="script.js"></script>
+<script src="js/main.js"></script>
+<script src="js/contact.js"></script>
 </body>
 </html>
