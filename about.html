@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Me — Elizabeth Ogugua</title>
+<title>About Me — Ogugua Elizabeth Ebere</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
   <nav class="navbar">
-    <a href="index.html" class="brand"><span class="dot">&lt;</span>Elizabeth.Ogugua<span class="dot">/&gt;</span></a>
+    <a href="index.html" class="brand"><span class="dot">&lt;</span>Ogugua.Elizabeth<span class="dot">/&gt;</span></a>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -34,10 +34,10 @@
       <div class="about-photo">
         <div class="avatar-frame" style="aspect-ratio:4/5;">
           <div class="scan-line"></div>
-          <img src="images/image.jpeg" alt="Portrait of Elizabeth Ogugua" onerror="this.style.display='none'; this.parentElement.querySelector('.avatar-placeholder').style.display='block';">
+          <img src="Media/Myphoto.jpg" alt="Portrait of Ogugua Elizabeth Ebere" onerror="this.style.display='none'; this.parentElement.querySelector('.avatar-placeholder').style.display='block';">
           <div class="avatar-placeholder" style="display:none;">
             <div class="ring">👤</div>
-            Replace images/image.jpeg<br>with your photo
+            Replace Media/Myphoto.jpg<br>with your photo
           </div>
         </div>
         <div class="quote-chip">"Every line of code I write is a step closer to systems worth trusting."</div>
@@ -57,11 +57,17 @@
         <!-- Multimedia requirement: short intro video -->
         <div class="hud-panel media-panel">
           <p class="eyebrow" style="margin-bottom:.6rem;">Watch</p>
-          <video controls poster="images/image.jpeg">
-            <source src="media/intro.mp4" type="video/mp4">
-            Your browser does not support embedded video.
-          </video>
-          <p class="media-caption">🎬 A short introduction video. Replace <code>media/intro.mp4</code> with your own recording.</p>
+          <div style="position:relative;padding-top:56.25%;border-radius:8px;overflow:hidden;border:1px solid var(--border);">
+            <iframe
+              src="https://www.youtube.com/embed/NGooOtgRCjc"
+              title="Introduction video"
+              style="position:absolute;top:0;left:0;width:100%;height:100%;"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <p class="media-caption">🎬 A short introduction video.</p>
         </div>
       </div>
     </div>
@@ -145,7 +151,7 @@
     <a href="planner.html">Planner</a>
     <a href="contact.html">Contact</a>
   </div>
-  <p class="copyright">© 2026 Elizabeth Ogugua · COS 106 Term Project · MIVA Open University</p>
+  <p class="copyright">© 2026 Ogugua Elizabeth Ebere · COS 106 Term Project · MIVA Open University</p>
 </footer>
 
 <script src="js/main.js"></script>
